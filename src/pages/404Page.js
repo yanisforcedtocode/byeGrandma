@@ -3,7 +3,7 @@ import React from "react";
 // === components
 
 
-function noSuchPage (props){
+function NoSuchPage (props){
     return (
         <React.Fragment>
             no such page.
@@ -11,4 +11,4 @@ function noSuchPage (props){
     )
 }
 
-export default noSuchPage;
+export default NoSuchPage;

@@ -11,9 +11,10 @@ import Footer from './components/sections/footer';
 import HomePage from './pages/homePage';
 import TimeLinePage from './pages/timeLinePage';
 import CloseRelativesPage from './components/layout/closeRelatives';
+import NoSuchPage from './pages/404Page';
  
 // === variables
-const navList = ["home", "gallery", "msg"]
+
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path ="timeline" element={<TimeLinePage />} />
             <Route path = "lovedones" element={<CloseRelativesPage />} />
-            <Route path = "*" element={<HomePage />} />
+            <Route path = "*" element={<NoSuchPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
