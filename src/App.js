@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // === components
 import Header from './components/sections/header'
-import Body from './components/sections/body';
 import Footer from './components/sections/footer';
 
 // === pages
@@ -30,6 +29,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      
       <Footer></Footer>
     </React.Fragment>
   );

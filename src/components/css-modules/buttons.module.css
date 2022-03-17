@@ -1,0 +1,26 @@
+.submitBtn {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #f3f3f3;
+  font-weight: 500;
+  padding: 10px 25px;
+  border: 0px solid rgba(60, 60, 60, 0.2);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px rgba(60, 60, 60, 0.3);
+          box-shadow: 0 2px rgba(60, 60, 60, 0.3);
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background-color: #d1d1d1;
+}
+
+.submitBtn:active {
+  background-color: #b1b1b1;
+  -webkit-box-shadow: 0 1px rgba(60, 60, 60, 0.3);
+          box-shadow: 0 1px rgba(60, 60, 60, 0.3);
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}

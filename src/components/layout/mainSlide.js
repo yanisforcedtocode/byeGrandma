@@ -54,15 +54,10 @@ function MainSlide (props){
             return false
         }
     }
-    // effects
-    useEffect(
-        setInterval(
-            function(){
-console.log("tick")            }, 1000
-        ),[]
-    )
 
- 
+    useEffect(function(){
+        setInterval(rightHandler, 3500)
+    }, []);
     return(
         <div className={styles.slide}>
             <Left leftHandler = {leftHandler} class ={styles.slide__container__left}></Left>

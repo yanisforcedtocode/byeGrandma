@@ -1,8 +1,5 @@
 import React from 'react';
-import MainSlide from '../layout/mainSlide';
-import TimeLineGallery from '../layout/timeLineGallery';
-import CloseRelatives from '../layout/closeRelatives';
-import MessageBoard from '../layout/messageBoard';
+
 
 // === variables
 
