@@ -9,7 +9,7 @@ import Footer from './components/sections/footer';
 // === pages
 import HomePage from './pages/homePage';
 import TimeLinePage from './pages/timeLinePage';
-import CloseRelativesPage from './components/layout/closeRelatives';
+import CloseRelativesPage from './pages/closeRelativesPage';
 import NoSuchPage from './pages/404Page';
  
 // === variables

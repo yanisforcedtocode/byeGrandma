@@ -1,19 +1,12 @@
-import React from 'react';
-
-
+// === css
+import Styles from "./../css-modules/sections.module.css"
 // === variables
 
 function Body(props){
     return (
-        <React.Fragment>
-            <div className='site_body'>
-                body items.
-                {/* <MainSlide></MainSlide>
-                <TimeLineGallery></TimeLineGallery>
-                <CloseRelatives/>
-                <MessageBoard/> */}
+            <div className={Styles.site_body}>
+                {props.children}
             </div>
-        </React.Fragment>
     )
 }
 

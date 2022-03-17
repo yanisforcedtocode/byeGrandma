@@ -6,7 +6,7 @@ import React from 'react';
 function Footer(props){
     return (
         <React.Fragment>
-            <div className='site_body'>
+            <div className='site_footer'>
                 footer items.
             </div>
         </React.Fragment>

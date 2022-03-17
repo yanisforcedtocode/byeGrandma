@@ -13,13 +13,13 @@ function MessageBoard (props){
     // states
     const [msgSubmitted, setMsgSubmitted] = useState(0)
 
-    return(
-        <div className='msgBoard__section'>
-            message board items.
-            <MB_viewport msgSubmitted = {msgSubmitted}/>
-            <MB_input setMsgSubmitted = {setMsgSubmitted}/>
-            </div>
-    )
+    return (
+        <div className="msgBoard__section">
+          message board items.
+          <MB_viewport msgSubmitted={msgSubmitted} />
+          <MB_input setMsgSubmitted={setMsgSubmitted} />
+        </div>
+    );
 }
 
 export default MessageBoard;

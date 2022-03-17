@@ -83,7 +83,9 @@ const MB_viewport = function(props){
         <div>message board viewport</div>
         <Left leftHandler = {leftHandler}class ={styles.slide__container__left}></Left>
         <Right rightHandler = {rightHandler} class ={styles.slide__container__right}></Right>
-        {data.map((el, ind)=>{
+        {
+            data.length > 0 ? 
+        data.map((el, ind)=>{
             const date = new Date(Number(el.created_at.$numberLong))
             // const date = new Date(Number(el.created_at.$numberLong))
                 return(
@@ -92,7 +94,7 @@ const MB_viewport = function(props){
                 <span>message: {el.message}</span>
                 <span>time: {date.toDateString()}</span>
                 </div>)
-        })}
+        }):""}
         <p>current page: {page}</p>
         <p>total pages: {availPage}</p>
       </React.Fragment>

@@ -1,13 +1,14 @@
 // === packages
 import React from "react";
 // === components
+import Body from './../components/sections/body'
 
 
 function NoSuchPage (props){
     return (
-        <React.Fragment>
+        <Body>
             no such page.
-        </React.Fragment>
+        </Body>
     )
 }
 
