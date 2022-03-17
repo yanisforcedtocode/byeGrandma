@@ -63,17 +63,18 @@ const MB_viewport = function(props){
     // refresh data on submit
     useEffect(()=>{
         if(props.msgSubmitted > 0){
-            async function fetchData(){
-                const newData = await getMsg(getUrl, (page - 1)*limit, limit)
-                if(newData.length > 0){
-                    const myTimeout = setTimeout(async()=>{
-                        await setData((prevState)=>{
-                            return newData
-                        })
-                    }, 2000);
+            if(page !== 1){setPage(1)}
+            if(page === 1){
+                async function fetchData(){
+                    const newData = await getMsg(getUrl, (page - 1)*limit, limit)
+                    if(newData.length > 0){
+                            await setData((prevState)=>{
+                                return newData
+                            })
+                    }
                 }
+                fetchData()
             }
-            fetchData()
         }
     },[props.msgSubmitted])
 
