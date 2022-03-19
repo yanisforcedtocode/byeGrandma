@@ -1,12 +1,22 @@
 import React from 'react';
+// === css
+import styles from './../css-modules/sections.module.css'
 
 function NavBar (props){
     return(
-        <ul>
+        <div className={styles.site_header_container__grid}>
         {props.navList.map((el, ind)=>{
-            return (<a key = {`site__nav__link${ind}`} href = {`/${el.href}`}><li >{el.name}</li></a>)
+            return (
+              <a
+                className={styles.site_header_container__grid__item}
+                key={`site__nav__link${ind}`}
+                href={`/${el.href}`}
+              >
+                <div>{el.name}</div>
+              </a>
+            );
         })}
-        </ul>
+        </div>
     )
 }
 

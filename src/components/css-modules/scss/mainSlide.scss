@@ -7,7 +7,6 @@
 
 }
 .slide__container{
-    height: 400px;
     display: grid;
     position: relative;
     grid-template-columns: 25% 25% 25% 25%;
@@ -16,8 +15,10 @@
 }
 .slide__container__imgWrapper{
     width: 100%;
-    height: 100%;
+    height: fit-content;
     overflow:hidden;
+    line-height: 0px;
+
 
 }
 .slide__container__imgWrapper__img{
@@ -32,6 +33,7 @@
     height: auto;
     top: 50%;
     left: 10px;
+    transform: translateY(-50%);
     z-index: 3;
 }
 .slide__container__right{
@@ -40,5 +42,6 @@
     height: auto;
     top: 50%;
     right: 10px;
+    transform: translateY(-50%);
     z-index: 3;
 }

@@ -14,21 +14,31 @@ const relatives = [
      {imgSrc: image01, name:'Person01', relation:'ab', message: "lorem25"},
      {imgSrc: image02, name:'Person02', relation:'bc', message: "lorem25"},
      {imgSrc: image03, name:'Person03', relation:'cd', message: "lorem25"},
+     {imgSrc: image04, name:'Person04', relation:'ce', message: "lorem25"},
+     {imgSrc: image01, name:'Person01', relation:'ab', message: "lorem25"},
+     {imgSrc: image02, name:'Person02', relation:'bc', message: "lorem25"},
+     {imgSrc: image03, name:'Person03', relation:'cd', message: "lorem25"},
      {imgSrc: image04, name:'Person04', relation:'ce', message: "lorem25"}
 ]
 
 function CloseRelativesPage (props){
     // states
     const [overlayData, setoverlayData] = useState('')
-    const [isOpenedOverlay, setisOpenedOverlay] = useState('false')
+    const [isOpenedOverlay, setisOpenedOverlay] = useState(false)
+    // effect
+    useEffect(()=>{
+        console.log(isOpenedOverlay)
+    },[isOpenedOverlay])
     // handlers
-    const imageClickHandler = (e)=>{
-        console.log(e)
+    const imageClickHandler = (ind)=>{
+        setisOpenedOverlay(true)
+        setoverlayData(relatives[ind])
+        console.log(ind)
     }
 
     return (
         <Body>
-            <CloseRelativesOverlay overlayData = {overlayData} isOpenedOverlay = {isOpenedOverlay}/>
+            <CloseRelativesOverlay setisOpenedOverlay = {setisOpenedOverlay} overlayData = {overlayData} isOpenedOverlay = {isOpenedOverlay}/>
             <CloseRelatives imageClickHandler = {imageClickHandler} relatives = {relatives} setoverlayData = {setoverlayData} setisOpenedOverlay = {setisOpenedOverlay}/>
         </Body>
     )
