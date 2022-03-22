@@ -1,0 +1,24 @@
+.submitBtn {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #f3f3f3;
+  font-weight: 500;
+  padding: 10px 25px;
+  border: 1px solid rgba(60, 60, 60, 0.2);
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0px;
+  font-size: 0.8rem;
+}
+
+.submitBtn:hover {
+  background-color: #d1d1d1;
+}
+
+.submitBtn:active {
+  background-color: #b1b1b1;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}

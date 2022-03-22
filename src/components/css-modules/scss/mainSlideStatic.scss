@@ -1,0 +1,27 @@
+.slide{
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow:hidden;
+
+}
+.slide__container{
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow:hidden;
+    align-items: center;
+}
+.slide__container__imgWrapper{
+    width: 100%;
+    overflow:hidden;
+    line-height: 0px;
+    aspect-ratio: 2;
+}
+.slide__container__imgWrapper__img{
+    width: 100%;
+    object-position: center;
+    aspect-ratio: 1.6;
+    object-fit: cover;
+}
