@@ -39,7 +39,8 @@
     z-index: 3;
 }
 .viewport__container__title{
-    font-size: 0.8rem;
+    font-size: 1rem;
+    margin-bottom: 5px;
 }
 .viewport__container__controls{
     width: fit-content;
@@ -53,6 +54,7 @@
     margin: 0 auto; 
     box-shadow: 2px 2px 4px 2px rgba(60,60,60,0.1);
     border-radius: 5px;
+    background-color: #f4f0eb8f;
 }
 .viewport__container__grid__card{
     display: grid;
@@ -153,7 +155,6 @@ object-fit: cover;    line-height: 0;
  .messageInput__container__title{
      font-size: 0.8rem;
  }
- .messageInput__container__contentWrapper{}
  .messageInput__container__name{
      font-size: 0.8rem;
      width: 50%;
@@ -175,4 +176,9 @@ object-fit: cover;    line-height: 0;
     box-sizing: border-box;
     font-size: 0.8rem;
     margin-bottom: 10px;
+ }
+
+.messageInput__container__subtitle{
+    font-size: 0.8rem;
+    margin: 5px 0px;
  }

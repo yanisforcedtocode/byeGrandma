@@ -19,7 +19,7 @@ const FlowerPicker = (props) => {
   // effects
   return (
     <div className={styles.flower__picker__container}>
-      <h3 className={styles.flower__picker__title}>Please present flower.</h3>
+      <h3 className={styles.flower__picker__title}>請選取及獻上鮮花</h3>
       <div className={styles.flower__picker__grid}>
         {props.images.map((el, ind) => {
           return (

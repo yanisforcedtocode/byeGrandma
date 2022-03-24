@@ -1,10 +1,9 @@
 // === packages
 import {useState, useEffect} from 'react'
+// === components
+import CloseRelativesCard from './closeRelatives__card'
 // === css
 import styles from './../css-modules/relativeGallery.module.css'
-// === files
-import cross from './../../asset/icons/xmark-solid.svg'
-
 
 function CloseRelativesOverlay (props){
     console.log(props.isOpenedOverlay===false)
@@ -18,12 +17,7 @@ function CloseRelativesOverlay (props){
     
     return(
         <div className={styles.closeRelatives__overlay} style = {{display:`${props.isOpenedOverlay? "block":"none"}`}}>
-            <img onClick = {crossHandler} src={cross} alt="" className={styles.closeRelatives__overlay__cross} />
-            <p>{props.overlayData.name}</p>
-            <p>{props.overlayData.relation}</p>
-            <p>{props.overlayData.message}</p>
-            <img src = {props.overlayData.imgSrc}></img>
-            close relatives overlay.
+            <CloseRelativesCard isOpenedOverlay = {props.isOpenedOverlay}  crossHandler={crossHandler} imgSrc = {props.overlayData.imgSrc} name = {props.overlayData.name} relation = {props.overlayData.relation} message = {props.overlayData.message}></CloseRelativesCard>
         </div>
     )
 }

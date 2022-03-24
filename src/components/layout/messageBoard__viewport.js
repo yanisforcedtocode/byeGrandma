@@ -97,7 +97,7 @@ const MB_viewport = function(props){
 
     return (
         <div className={styles.viewport__container}>
-        <h4 className={styles.viewport__container__title}>Guest messages</h4>
+        <h4 className={styles.viewport__container__title}>賓客留言</h4>
         <div className={styles.viewport__container__controls}>
         <Left  leftHandler = {leftHandler}class ={styles.viewport__container__left}></Left>
         <Right  rightHandler = {rightHandler} class ={styles.viewport__container__right}></Right>

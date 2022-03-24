@@ -56,6 +56,7 @@ a:-webkit-any-link {
     font-size: 1.2rem;
     margin: 0px;
     padding: 0px;
+    color: #fff;
 }
 .site_header_container__grid{
     display: flex;
@@ -63,6 +64,10 @@ a:-webkit-any-link {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
+    @media only screen and (max-width: 600px) {
+        display: none;
+        
+    }
 }
 .site_header_container__grid__item{
     position: relative;

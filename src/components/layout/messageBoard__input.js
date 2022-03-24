@@ -28,7 +28,7 @@ const MB_input = function(props){
         if (name.length > 0 && message.length>0 && props.isFlowerSelected){
           setIsSubmit(true)
         }else{
-          setWarning("no valid message, flower or name")
+          setWarning("請正確填寫姓名，祝福及鮮花")
         }
     }
     // effects
@@ -42,7 +42,7 @@ const MB_input = function(props){
       setIsSubmit(false)
       setMessage("")
       setName("")
-      setWarning("thanks for your blessings")
+      setWarning("Thanks for your blessings!")
       props.setIsFlowerSelected(false)
       }
     },[isSubmit])
@@ -53,14 +53,16 @@ const MB_input = function(props){
           <div>
             {warning? <p className={styles.messageInput__container__warning}>{warning}</p>:""}
 
-          <h4 className={styles.messageInput__container__title}>Please leave a blessing.</h4>
-          <input className={styles.messageInput__container__name} onInput={nameHandler} type = "text" name = "name" value = {name} placeholder="Enter your name here..."></input>
+          <h4 className={styles.messageInput__container__title}>請留下祝福</h4>
+          <p className={styles.messageInput__container__subtitle}>名字:</p>
+          <input className={styles.messageInput__container__name} onInput={nameHandler} type = "text" name = "name" value = {name} placeholder="請在此填寫名字..."></input>
           </div>
           <div>
-          <textarea className={styles.messageInput__container__message} onInput={messageHandler} name="comment" value = {message} placeholder="Enter a message here..."></textarea>
+            <p className={styles.messageInput__container__subtitle}>祝福:</p>
+          <textarea className={styles.messageInput__container__message} onInput={messageHandler} name="comment" value = {message} placeholder="請在此填寫祝福..."></textarea>
           </div>
         </form>
-        <SubmitBtn submitHandler = {submitHandler}>submit</SubmitBtn>
+        <SubmitBtn submitHandler = {submitHandler}>確認獻花及留言</SubmitBtn>
       </div>
     );
 }

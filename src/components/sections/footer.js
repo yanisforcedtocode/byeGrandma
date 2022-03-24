@@ -9,7 +9,7 @@ function Footer(props){
     return (
         <React.Fragment>
             <div className={styles.site_footer}>
-                <p className={styles.site_footer__credits}>By Yan, and everyone loved by grandma.</p>
+                <p className={styles.site_footer__credits}>By 孫仔阿殷, and everyone loved by grandma.</p>
             </div>
         </React.Fragment>
     )

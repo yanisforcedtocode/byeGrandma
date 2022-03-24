@@ -1,7 +1,6 @@
 // === css
 import styles from "./../css-modules/sections.module.css"
 // === image
-import background from "./../../asset/images/homepage/intersection05.jpg"
 // === variables
 
 function Body(props){

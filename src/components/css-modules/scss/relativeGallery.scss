@@ -1,5 +1,7 @@
 .closeRelatives__section{
     width: 100%;
+    padding: 30px 0px;
+    min-height: calc(100vh - 330px);
 }
 .closeRelatives__section__grid{
     display: grid;
@@ -20,7 +22,7 @@
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     background-color: rgba(60,60,60,0.5);
     z-index: 4;
@@ -30,15 +32,78 @@
     position: relative;
     width: 20px;
     z-index: 5;
-
 }
 
-.closeRelatives__overlay__card{}
-.closeRelatives__overlay__card__container{}
-.closeRelatives__overlay__card__container__grid{}
-.closeRelatives__overlay__card__container__grid__imgWrapper{}
-.closeRelatives__overlay__card__container__grid__contentWrapper{}
-.closeRelatives__overlay__card__container__grid__img{}
-.closeRelatives__overlay__card__container__grid__name{}
-.closeRelatives__overlay__card__container__grid__relation{}
-.closeRelatives__overlay__card__container__grid__message{}
+// === card
+.closeRelatives__overlay__card{
+    width: 100%;
+    max-width: 650px;
+    padding: 15px;
+    margin: 0px auto;
+    
+    transition: opacity 300ms ease-in;
+}
+.closeRelatives__overlay__card__container{
+    position: relative;
+    width: 100%;
+    padding: 25px 15px;
+    background-color: #f4f0eb;
+    border-radius: 5px;
+    box-shadow:  3px 4px 2px rgba(60, 60, 60, 0.2);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover
+    
+}
+.closeRelatives__overlay__card__container__cross{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 15px;
+    aspect-ratio: 1;
+}
+.closeRelatives__overlay__card__container__title{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.closeRelatives__overlay__card__container__grid{
+    display: block;
+}
+.closeRelatives__overlay__card__container__grid__imgWrapper{
+    width: 100%;
+    box-sizing: border-box;
+    line-height: 0px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 0px auto;
+    aspect-ratio: 1;
+}
+.closeRelatives__overlay__card__container__grid__contentWrapper{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.closeRelatives__overlay__card__container__grid__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.closeRelatives__overlay__card__container__grid__title{
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin: 5px 0px;
+
+}
+.closeRelatives__overlay__card__container__grid__name{
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 5px 0px;
+
+}
+.closeRelatives__overlay__card__container__grid__relation{
+    font-size: 0.8rem;
+    margin: 5px 0px;
+}
+.closeRelatives__overlay__card__container__grid__message{
+    font-size: 0.8rem;
+    margin: 5px 0px;
+}
