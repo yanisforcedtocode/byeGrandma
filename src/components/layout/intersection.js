@@ -1,5 +1,4 @@
 // === image
-import background from "./../../asset/images/homepage/intersection08.jpg"
 // === css
 import styles from "./../css-modules/intersection.module.css"
 

@@ -1,5 +1,6 @@
 // === packages
 import {useState, useEffect, Fragment, memo} from 'react';
+import { Link } from "react-router-dom";
 
 // === components
 import NavBar from '../functional/navBar';
@@ -9,7 +10,7 @@ import HamburgerMenu from '../layout/hamburger__menu';
 import styles from './../css-modules/sections.module.css'
 // === image
 // === variables
-const navList = [{name:"首頁", href:""},{name:"time line", href:"timeline"},{name:"婆婆的摯親", href:"lovedones"}]
+const navList = [{name:"首頁", href:""},{name:"百年回憶", href:"timeline"},{name:"婆婆的摯親", href:"lovedones"}]
 
 
 function Header(){
@@ -23,7 +24,9 @@ function Header(){
        <Fragment>
             <div className={styles.site_header}>
                 <div className={styles.site_header_container}>
-                <h3 className={styles.site_header_contaier__title}>Farewell, grandma</h3>
+                <Link to={'/'}>
+                    <h3 className={styles.site_header_contaier__title}>Farewell, grandma</h3>
+                </Link>
                 <NavBar  navList ={navList} ></NavBar>
                 <Hamburger setIsOpened = {setIsOpened} setHamState = {setHamState} isOpened = {isOpened} hamState = {hamState}  ></Hamburger>
                 </div>

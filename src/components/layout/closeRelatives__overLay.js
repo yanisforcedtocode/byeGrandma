@@ -6,12 +6,10 @@ import CloseRelativesCard from './closeRelatives__card'
 import styles from './../css-modules/relativeGallery.module.css'
 
 function CloseRelativesOverlay (props){
-    console.log(props.isOpenedOverlay===false)
     // state
     
     // handler
     const crossHandler = ()=>{
-        console.log('close')
         props.setisOpenedOverlay(false)
     }
     

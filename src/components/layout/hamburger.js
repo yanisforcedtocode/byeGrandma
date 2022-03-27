@@ -12,7 +12,6 @@ const Hamburger = (props)=>{
     }
     // === effect
     useEffect(()=>{
-        console.log(props.isOpened)
         if(props.isOpened){
             props.setHamState((prevState)=>{
                 return {
