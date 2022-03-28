@@ -20,14 +20,6 @@ const appendImgUrlArr = (data, year)=>{
 
 
 // import timeline images
-const images = importAll(
-    require.context("/src/asset/jpg", false, /\.(png|jpeg|jpg|svg)$/)
-  );
-const images_01 = importAll(
-    require.context("/src/asset/jpg_01", false, /\.(png|jpeg|jpg|svg)$/)
-);
-
-
 const img1960 = ['1960_00.jpg', '1960_01.jpg', '1960_02.jpg',  '1960_03.jpg',  '1960_04(胡文虎別墅).jpg', '1960_05(胡文虎別墅).jpg', '1960_06(胡文虎別墅).jpg']
 const img1970 = ['1970_00.jpg','1970_01.jpg']
 const img1980 = ['1980_00.jpg',  '1980_01.jpg',  '1980_02.jpg',  '1980_03.jpg']
