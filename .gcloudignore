@@ -13,6 +13,9 @@
 .git
 .gitignore
 
+# Node.js dependencies:
+node_modules/
+
 # dependencies
 /node_modules
 /.pnp
@@ -20,9 +23,6 @@
 
 # testing
 /coverage
-
-# production
-/build
 
 # misc
 .DS_Store

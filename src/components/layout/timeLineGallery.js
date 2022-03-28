@@ -9,7 +9,7 @@ function importAll(r) {
     return r.keys().map(r);
   }
 const appendImgUrl = (year, ns)=>{
-  return `https://storage.googleapis.com/webasset__yancetse/asset/images/timeLineGallery/${year}/${ns}`
+  return `https://storage.googleapis.com/grandmaimgasset/relativesGallery/${year}/${ns}`
 }
 const appendImgUrlArr = (data, year)=>{
   const arr = data.map((el)=>{
