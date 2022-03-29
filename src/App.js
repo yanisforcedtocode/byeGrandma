@@ -1,6 +1,8 @@
 // === packages
 import React from 'react';
 import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
+import {Helmet} from "react-helmet";
+
 
 // === components
 import Header from './components/sections/header'
@@ -14,13 +16,17 @@ import CloseRelativesPage from './pages/closeRelativesPage';
 import NoSuchPage from './pages/404Page';
 
 // === images
-import bgHead from "./asset/images/homepage/intersection06.jpg"
 
 // === variables
 
 function App() {
   return (
     <MainFrame>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>告別婆婆 Farewell, Grandma </title>
+                <meta name="theme-color" content="#f4f0eb" />
+            </Helmet>
       <BrowserRouter>
       <Header></Header>
         <Routes>
