@@ -24,12 +24,10 @@ function App() {
       <BrowserRouter>
       <Header></Header>
         <Routes>
-          <Route path="/" >
             <Route index element={<HomePage />} />
             <Route path ="timeline" element={<TimeLinePage />} />
             <Route path = "lovedones" element={<CloseRelativesPage />} />
             <Route path = "*" element={<NoSuchPage />} />
-          </Route>
         </Routes>
       </BrowserRouter>
       

@@ -24,7 +24,7 @@ const img1960 = ['1960_00.jpg', '1960_01.jpg', '1960_02.jpg',  '1960_03.jpg',  '
 const img1970 = ['1970_00.jpg','1970_01.jpg']
 const img1980 = ['1980_00.jpg',  '1980_01.jpg',  '1980_02.jpg',  '1980_03.jpg']
 const img1990 = ['1990_00.jpg', '1990_01.jpg',  '1990_02.jpg',  '1990_03.jpg',  '1990_04.jpg',  '1990_05.jpg',  '1990_06.jpg',  '1990_07.jpg',  '1990_08.jpg',  '1990_09.jpg',  '1990_10(macau).jpg',  '1990_11(macau).jpg',  '1990_12(macau).jpg',  '1990_13(macau).jpg',  '1990_14(macau).jpg','1990_15(macau).jpg',  '1990_16(macau).jpg',  '1990_17(macau).jpg',  '1990_18(macau).jpg',  '1990_19(airport).jpg',  '1990_20.jpg']
-const img2000 = ['2000_00(TaiWo).jpg']
+const img2000 = ['2000_00(TaiWo).jpg', '2000_01.jpeg','2000_02.jpeg', '2000_03.jpeg']
 const img2010 = ['2010_00.jpg',  '2010_01.jpg',   '2010_02.jpg', '2010_03.jpg', '2020_010.jpg', '2020_011.jpg', '2020_012.jpg', '2020_013.jpg', '2020_014.jpg',   '2020_015.jpg',  '2020_016.jpg',  '2020_017.jpg', '2020_018.jpg', '2020_019.jpg', '2020_020.jpg', '2020_021.jpg', '2020_022.jpg', '2020_023.jpg', '2020_024.jpg' , '2020_025.jpg', '2020_026.jpg', '2020_04.jpg', '2020_05.jpg', '2020_06.jpg'
   ,'2020_07.jpg'
   ,'2020_08.jpg'
@@ -32,7 +32,7 @@ const img2010 = ['2010_00.jpg',  '2010_01.jpg',   '2010_02.jpg', '2010_03.jpg', 
 const img2020 = ['2020_01.jpg',
   '2020_02.jpg',
   '2020_03.jpg',
-  '2020_04.jpg']
+  '2020_04.jpg','2020_05.jpeg']
 const images_02 = {img1960, img1970,img1980, img1990, img2000, img2010, img2020}
   
 function TimeLineGallery (props){
