@@ -26,7 +26,11 @@ function App() {
                 <meta charSet="utf-8" />
                 <title>告別婆婆 Farewell, Grandma </title>
                 <meta name="theme-color" content="#f4f0eb" />
-            </Helmet>
+                <meta property="og:title" content="告別婆婆" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.mygrandma.family/" />
+                <meta property="og:image" content="https://storage.googleapis.com/grandmaimgasset/icon/grandma_200.png" />
+                            </Helmet>
       <BrowserRouter>
       <Header></Header>
         <Routes>
