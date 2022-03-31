@@ -7,6 +7,7 @@ import {useState} from 'react'
 import MB_input from './messageBoard__input';
 import MB_viewport from './messageBoard__viewport';
 import FlowerPicker from './messageBoard__flowerPicker';
+import ErrorBoundary from '../functional/errorBoundary';
 
 // === functions
 function importAll(r) {
@@ -25,7 +26,9 @@ function MessageBoard (props){
 
     return (
         <div className="msgBoard__section">
-          <MB_viewport images = {images} isFlowerSelected = {isFlowerSelected} msgSubmitted={msgSubmitted} />
+          <ErrorBoundary>
+            <MB_viewport images = {images} isFlowerSelected = {isFlowerSelected} msgSubmitted={msgSubmitted} />
+          </ErrorBoundary>
           <FlowerPicker images = {images} isFlowerSelected = {isFlowerSelected} setIsFlowerSelected = {setIsFlowerSelected}></FlowerPicker>
           <MB_input isFlowerSelected = {isFlowerSelected} setIsFlowerSelected = {setIsFlowerSelected} setMsgSubmitted={setMsgSubmitted} />
         </div>

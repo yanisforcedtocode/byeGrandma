@@ -23,6 +23,7 @@ const MB_viewport = function(props){
     const [data, setData] = useState([])
     const [availPage, setAvailPage] = useState(0)
     const [vpOpacity, setVpOpacity] = useState(`0%`)
+    const [error, setError] = useState(false)
     // handlers
     const leftHandler = (e)=>{
         if(isInBoundary(page - 1)){
@@ -45,35 +46,52 @@ const MB_viewport = function(props){
 
     // effects
     // load doc count and first pagination on mount
-    useEffect(()=>{
-        async function fetchData(){
-            const docCount = await getDocCount(countUrl)
-            const newData = await getMsg(getUrl, 0, limit)
-            setAvailPage((prevState)=>{return Math.ceil((docCount.doccount.$numberLong)/limit)})
-            setData((prevState)=>{
-                return newData
-            })
-            setVpOpacity((prevState)=>{return "100%"})
+    useEffect(() => {
+      async function fetchData() {
+        try {
+          const docCount = await getDocCount(countUrl);
+          const newData = await getMsg(getUrl, 0, limit);
+          setAvailPage((prevState) => {
+            return Math.ceil(docCount.doccount.$numberLong / limit);
+          });
+          setData((prevState) => {
+            return newData;
+          });
+          setVpOpacity((prevState) => {
+            return "100%";
+          });
+        } catch (err) {
+            console.log("err caught by component")
+            setError(()=>{throw new Error("blah")})
         }
-        fetchData()
-    },[])
+      }
+      fetchData();
+    }, []);
     // refresh data on page change
     useEffect(()=>{
         async function fetchData(){
+            try{
             setVpOpacity((prevState)=>{return "0%"})
             const newData = await getMsg(getUrl, (page - 1)*limit, limit)
-            if(newData.length > 0){
+            if(newData && newData.length > 0){
                 setTimeout(() => {
                     setData((prevState)=>{
                         return newData
                     })
                 }, 300);
+            }else{
+                throw new Error("blah")
             }
             setTimeout(() => {
                 setVpOpacity((prevState)=>{return '100%'})
             }, 300);
+        }catch(err){
+            console.log("err caught by component")
+            setError(()=>{throw new Error("blah")})
+        }
         }
         fetchData()
+        
     },[page])
     // refresh data on submit
     useEffect(()=>{
@@ -102,27 +120,25 @@ const MB_viewport = function(props){
         <Left  leftHandler = {leftHandler}class ={styles.viewport__container__left}></Left>
         <Right  rightHandler = {rightHandler} class ={styles.viewport__container__right}></Right>
         </div>
-        <div className={styles.viewport__container__grid}>
-        {
-            data.length > 0 ? 
-        data.map((el, ind)=>{
-            const date = new Date(Number(el.created_at.$numberLong))
-
-                return(
-                <div style = {{opacity:`${vpOpacity}`}}className={styles.viewport__container__grid__card} key = {ind}>
-                    <div className={styles.viewport__container__grid__card__imgWrapper} >
-                        <img className={styles.viewport__container__grid__card__img} src = {el.flower!==undefined? images[el.flower]:images[1]}></img>
-                    </div>
-                    <div className={styles.viewport__container__grid__card__contentWrapper}>
-                        <p className={styles.viewport__container__grid__card__name}>{el.name}</p>
-                        <p className={styles.viewport__container__grid__card__message}>Blessing: {el.message}</p>
-                        <p className={styles.viewport__container__grid__card__time}>Date: {date.toDateString()}</p>
-                    </div>
-                </div>)
-        }):""}
-        <p className={styles.viewport__container__page}>current page: {page} / {availPage}</p>
-        </div>
-
+            <div className={styles.viewport__container__grid}>
+            {
+                data.length > 0 ? 
+                    data.map((el, ind)=>{
+                        const date = new Date(Number(el.created_at.$numberLong))
+                            return(
+                            <div style = {{opacity:`${vpOpacity}`}}className={styles.viewport__container__grid__card} key = {ind}>
+                                <div className={styles.viewport__container__grid__card__imgWrapper} >
+                                    <img className={styles.viewport__container__grid__card__img} src = {el.flower!==undefined? images[el.flower]:images[1]}></img>
+                                </div>
+                                <div className={styles.viewport__container__grid__card__contentWrapper}>
+                                    <p className={styles.viewport__container__grid__card__name}>{el.name}</p>
+                                    <p className={styles.viewport__container__grid__card__message}>Blessing: {el.message}</p>
+                                    <p className={styles.viewport__container__grid__card__time}>Date: {date.toDateString()}</p>
+                                </div>
+                            </div>)
+                    }):""}
+            <p className={styles.viewport__container__page}>current page: {page} / {availPage}</p>
+            </div>
         </div>
     );
 }
