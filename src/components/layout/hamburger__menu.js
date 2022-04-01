@@ -1,5 +1,4 @@
 // === packages
-import {useState, useEffect, Fragment} from 'react'
 import {Link} from 'react-router-dom'
 // === css
 import styles from './../css-modules/hamburger.module.css'

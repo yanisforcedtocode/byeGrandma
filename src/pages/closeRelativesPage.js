@@ -1,5 +1,5 @@
 // === packages
-import {useState, useEffect, Fragment} from "react";
+import {useState, Fragment} from "react";
  
 // === components
 import CloseRelatives from "../components/layout/closeRelatives";
@@ -13,6 +13,7 @@ import bg02 from "../asset/images/homepage/intersection12.jpg"
 const relatives = [
     {imgSrc: 'https://storage.googleapis.com/grandmaimgasset/relativesGallery/waiHing_00.jpeg', name:'潘惠郷', relation:'女兒', message: "媽媽，你令我勾起生活的點滴。那時我在教烹飪的時刻，有時會比較夜些，那時都是十點零，你就會跑落街等我回來保護我，恐我受騷擾。好似好打得咁。 直到婚後，我有仔仔之後，因我住九樓，無𨋢你又會叫阿中，阿堯幫我抱仔上樓回家。又在生活中帶領我在最耕辛的生活磨鍊。令到我不會有太大壓力。不知不覺堅強起來，媽你對我無形的愛，我係永記於心的。媽，在此感謝你，好掛住你，阿郷給祝福，我永遠懷念你。"},
     {imgSrc: 'https://storage.googleapis.com/grandmaimgasset/relativesGallery/poonMoChung_00.jpeg', name:'潘慕中', relation:'長子', message: "我做人父母之前，經常感覺阿媽你好囉嗦，但現在我知道你所講的每一句說話，都是關心潘家的每一個成員，你的關心不單止對家人，你對家傭都很關心。👍👍👍今年2月24日在九龍醫院見你最後的一面時，我不禁流下眼淚，想起阿媽你之前對我所講的一切及教導，我會跟你的吩咐做好自己，定要令我們潘家一切安好，阿爸阿媽我們一家人會努力！"},
+    {imgSrc: 'https://storage.googleapis.com/grandmaimgasset/relativesGallery/poonMoYiu_00.jpeg', name:'潘慕堯', relation:'次子', message: "感謝媽媽多年來，無偏無私，不分晝夜，對每一位家人的愛護、關懷、操心、及照顧，實在無言感激。有時候我們會覺得老人家有點囉嗦，但是現在回想，已再沒有機會聽到媽媽的聲音了！我與媽媽一起渡過的日子，無論是順境逆境，點點滴滴，不可能簡單說話來形容，只可以回憶盡在心底。生老病死是人生必經的階段。我一直不願意這一天的來臨，近年更加擔心這一天何時會來，但我還是要接受這個現實。事實上這兩年自從媽媽在家中跌倒，身體狀況一落千丈，更遇上疫情下的種種困難，對媽媽健康及心靈上的打擊，令她實在難受。頻繁的進出醫院，對她來說更是苦上加苦，我們也非常痛心。經過兩年的折磨，媽媽安祥地離去，儘管我們不捨得，這或許是對她一個好好的釋放！寫到這裏，我已經再次忍不住心底的眼淚。我好想跟媽媽說，這一生非常幸運有您作為我的母親，我珍惜這個緣份，我希望媽媽得到安寧，安心上路，延續您的愛心。無論在那一個時空，期盼這個緣份可以再次出現！永遠永遠懷念我們摯愛的母親、尊敬的嫲嫲！"},
     {imgSrc: 'https://storage.googleapis.com/grandmaimgasset/relativesGallery/waiMing_00.jpeg', name:'潘惠明', relation:'女兒', message: "給敬愛的母親 ; 雖然您巳離開我們，但在我心中是永遠懷念您！感恩在我的生命裡有一個「敬愛的母親」，媽媽我永遠愛您！願您一路走好 ! 女兒惠明敬上。"},
     {imgSrc: 'https://storage.googleapis.com/grandmaimgasset/relativesGallery/tseWaiKong.jpeg', name:'謝惠江', relation:'女婿', message: "我的外母是一位對人真誠,和有愛心的人,我的兩個兒子都是外母在医院接回家中,每天很快手替兩個孫仔冲涼,穿回衣服,孩子在長大过程中時有嘈吵,外母不會責駡,还和他們玩耍,真是家有一老如有一宝,所以在假期,我們會和她一齊飲茶,更會打吓麻雀仔。外母我永遠懷念你。"},
     {imgSrc: 'https://storage.googleapis.com/grandmaimgasset/relativesGallery/tseKinWai.jpeg', name:'謝健威 (1)', relation:'孫', message: "你好嗎？ 很掛住你呢！我最鐘意同有記憶嘅就係同你去飲茶。同你去係最開心嘅因為可以咩都唔理，無咩規矩咁叫鐘意食嘅野。同啲唔熟嘅人，我總會扮到好似好有規矩好客氣咁…懶係有儀態。所以同婆婆你飲係最自在，最開懷，食得最開心嘅。但係有時有啲麻煩，就係你鐘意同我爭俾錢，成日靜靜雞扮去廁所就俾定部長＄５００ 蚊，嘢都未食完，真係令人唔好意思，哈哈！好彩之後我都夠醒目晨早叫定部長唔收你啲錢，所以之後除咗啲慶祝事，我強迫你請我飲茶之外，多數都係我爭贏嘅，Yeah! 你多數會問我食咗幾多錢，我都一定會答：「茶樓話你太靚女，所以唔洗錢❤️」而你就會笑笑口咁話我痴線嘅，哈哈！"},

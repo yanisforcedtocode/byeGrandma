@@ -45,7 +45,7 @@ const MB_input = function(props){
       setWarning("Thanks for your blessings!")
       props.setIsFlowerSelected(false)
       }
-    },[isSubmit])
+    },[isSubmit,name, message, props,setMsgSubmitted])
     
     return (
       <div className={styles.messageInput__container}>

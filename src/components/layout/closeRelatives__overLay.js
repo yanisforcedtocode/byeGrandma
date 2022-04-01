@@ -1,5 +1,4 @@
 // === packages
-import {useState, useEffect} from 'react'
 // === components
 import CloseRelativesCard from './closeRelatives__card'
 // === css

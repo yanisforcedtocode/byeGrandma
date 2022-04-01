@@ -1,5 +1,5 @@
 // === packages
-import {useState, useEffect, Fragment, memo} from 'react';
+import {useState, Fragment, memo} from 'react';
 import { Link } from "react-router-dom";
 
 // === components

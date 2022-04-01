@@ -15,7 +15,7 @@ function TimeLineGalleryYear (props){
                         {props.images.map((el, ind)=>{
                             return(
                                 <div key = {`timeLineImg__${ind}`} onClick = {props.imageClickHandler} className={styles.timeLineGallery__section__container__imgGridWrapper__imgGrid__imgWrapper}>
-                                    <img src = {el} className={styles.timeLineGallery__section__container__imgGridWrapper__imgGrid__imgWrapper__img}></img>
+                                    <img alt = "" src = {el} className={styles.timeLineGallery__section__container__imgGridWrapper__imgGrid__imgWrapper__img}></img>
                                 </div>
                                     )
                                 })}

@@ -1,5 +1,4 @@
 // === packages
-import {useState, useEffect} from 'react'
 // === components
 import TimeLineCard from './timeLine__card'
 // === css

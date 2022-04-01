@@ -5,9 +5,6 @@ import TimeLineGalleryYear from './timeLineGallery__year';
 // === css
 import styles from './../css-modules/timeline.module.css'
 // === functions
-function importAll(r) {
-    return r.keys().map(r);
-  }
 const appendImgUrl = (year, ns)=>{
   return `https://storage.googleapis.com/grandmaimgasset/timeline/${year}/jpg/${ns}`
 }
@@ -33,7 +30,6 @@ const img2020 = ['2020_01.jpg',
   '2020_02.jpg',
   '2020_03.jpg',
   '2020_04.jpg','2020_05.jpeg']
-const images_02 = {img1960, img1970,img1980, img1990, img2000, img2010, img2020}
   
 function TimeLineGallery (props){
     // handlers

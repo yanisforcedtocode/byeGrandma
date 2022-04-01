@@ -5,15 +5,12 @@ import MainSlideStatic from '../components/layout/mainSlideStatic';
 import MessageBoard from "../components/layout/messageBoard";
 import Body from './../components/sections/body'
 import Intersection from "../components/layout/intersection";
-import BrokenStuff from '../components/layout/brokenStuff';
-import ErrorBoundary from '../components/functional/errorBoundary';
 
 // === images
 import bg01 from "../asset/images/homepage/intersection07.jpg"
 import bg02 from "../asset/images/homepage/intersection12.jpg"
 
 // === variables
-const bgColor = "rgb(163 167 166)"
 
 function HomePage (){
     return (
